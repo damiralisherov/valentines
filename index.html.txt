@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<title>Valentine</title>
+
+<style>
+    body {
+        background: #ffd6e7;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        margin-top: 100px;
+    }
+
+    h1 {
+        color: #c2185b;
+    }
+
+    .btn {
+        padding: 20px 40px;
+        font-size: 24px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #yesBtn {
+        background-color: #4CAF50;
+        color: white;
+        font-size: 28px;
+    }
+
+    #noBtn {
+        background-color: #f44336;
+        color: white;
+        position: absolute;
+    }
+
+    img {
+        width: 120px;
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+
+<img src="https://i.imgur.com/Z6a9D6Q.png" alt="cute">
+
+<h1>Қозы Көрпеш - Баян Сұлу күнін бірге өткіземіз бе?</h1>
+
+<button class="btn" id="yesBtn" onclick="yesClicked()">Иә</button>
+<button class="btn" id="noBtn" onmouseover="moveButton()">Жоқ</button>
+
+<script>
+
+function moveButton() {
+    const button = document.getElementById("noBtn");
+
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 100);
+
+    button.style.left = x + "px";
+    button.style.top = y + "px";
+}
+
+function yesClicked() {
+    document.body.innerHTML = "<h1 style='color:#c2185b'>Я знал(а)! 💕</h1>";
+}
+
+</script>
+
+</body>
+</html>
